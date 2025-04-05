@@ -1,0 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+body{
+  background-color: #c1d3f8;
+}
