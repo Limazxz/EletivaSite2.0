@@ -2,20 +2,20 @@ const Sobre = () => {
   return (
     <div className="container mt-5">
       <h2 className="mb-4">Sobre Nós</h2>
-      <p className="lead">
-        🔍 Missão Despertar nos estudantes uma nova perspectiva sobre o turismo,
+      <p className="fw-bold">
+        🔍 Nossa missão é despertar nos estudantes uma nova perspectiva sobre o turismo,
         apresentando-o como uma potente ferramenta de desenvolvimento econômico,
         social e cultural. A eletiva busca capacitar os alunos com conhecimentos
         práticos e teóricos sobre o turismo corporativo, empreendedorismo no
         setor e as diversas oportunidades de negócio que o envolvem.
       </p>
-      <p>
+      <p className="fw-bold">
         🌍 Visão Ser reconhecida como uma eletiva inovadora que transforma a
         forma como o turismo é percebido, preparando jovens protagonistas para
         atuar com criatividade, responsabilidade e visão estratégica em um
         mercado em constante crescimento e transformação.
       </p>
-      <p>
+      <p className="fw-bold">
         💡 Valores Empreendedorismo: Incentivamos ideias criativas e soluções
         inovadoras no setor turístico.
       </p>
