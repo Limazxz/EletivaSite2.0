@@ -1,25 +1,45 @@
 const Sobre = () => {
-    return (
-      <div className="container mt-5">
-        <h2 className="mb-4">Sobre Nós</h2>
-        <p className="lead">
-          Bem-vindo à página Sobre Nós! Aqui você encontrará informações sobre a
-          nossa missão, visão e valores.
-        </p>
-        <p>
-          Somos uma equipe dedicada a fornecer as melhores soluções para nossos
-          clientes, sempre com foco em inovação e qualidade.
-        </p>
-        <p>
-          Nossa missão é transformar ideias em realidade, ajudando nossos
-          parceiros a alcançar seus objetivos.
-        </p>
-        <p>
-          Entre em contato conosco para saber mais sobre nossos serviços e como
-          podemos ajudar você.
-        </p>
-      </div>
-    );
-  };
-  
-  export default Sobre;
+  return (
+    <div className="container mt-5">
+      <h2 className="mb-4">Sobre Nós</h2>
+      <p className="lead">
+        🔍 Missão Despertar nos estudantes uma nova perspectiva sobre o turismo,
+        apresentando-o como uma potente ferramenta de desenvolvimento econômico,
+        social e cultural. A eletiva busca capacitar os alunos com conhecimentos
+        práticos e teóricos sobre o turismo corporativo, empreendedorismo no
+        setor e as diversas oportunidades de negócio que o envolvem.
+      </p>
+      <p>
+        🌍 Visão Ser reconhecida como uma eletiva inovadora que transforma a
+        forma como o turismo é percebido, preparando jovens protagonistas para
+        atuar com criatividade, responsabilidade e visão estratégica em um
+        mercado em constante crescimento e transformação.
+      </p>
+      <p>
+        💡 Valores Empreendedorismo: Incentivamos ideias criativas e soluções
+        inovadoras no setor turístico.
+      </p>
+      <ul>
+        <li>
+          <strong>Sustentabilidade:</strong> Valorizamos práticas que respeitam
+          o meio ambiente e a cultura local.
+        </li>
+        <li>
+          <strong>Responsabilidade social:</strong> Promovemos o turismo como
+          meio de inclusão e valorização das comunidades.
+        </li>
+        <li>
+          <strong>Profissionalismo:</strong> Ensinamos a importância da ética,
+          da organização e da excelência nos serviços turísticos.
+        </li>
+        <li>
+          <strong>Curiosidade e protagonismo juvenil:</strong> Estimulamos o
+          olhar crítico, a autonomia e o desejo de aprender com o mundo à nossa
+          volta.
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default Sobre;
