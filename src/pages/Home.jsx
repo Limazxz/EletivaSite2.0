@@ -7,6 +7,7 @@ import foto4 from "../assets/foto4.jpg";
 const Home = () => {
   const [showCard, setShowCard] = useState(false);
   const [showCarousel, setShowCarousel] = useState(false);
+  const [showThirdCard, setShowThirdCard] = useState(false);
 
   const handleSectionClick = () => {
     setShowCard(!showCard);
@@ -14,6 +15,10 @@ const Home = () => {
 
   const handleCarouselClick = () => {
     setShowCarousel(!showCarousel);
+  };
+
+  const handleThirdSectionClick = () => {
+    setShowThirdCard(!showThirdCard);
   };
 
   return (
@@ -30,11 +35,42 @@ const Home = () => {
         <div className="col-md-4">
           <div
             className="card shadow-sm"
-            onClick={handleSectionClick}
+            onClick={handleThirdSectionClick}
             style={{ cursor: "pointer" }}
           >
             <div className="card-body">
               <h5 className="card-title">Seção 1</h5>
+              <p className="card-text">
+                Informações de quem somos.
+              </p>
+            </div>
+          </div>
+          {showThirdCard && (
+            <div className="card mt-3">
+              <div className="card-body">
+                <p className="card-text">
+                  📌 <strong>Lema:</strong> Turismo não é só viajar, é negócio!
+                  <br />
+                  👩‍🏫 <strong>Professora:</strong> Luciana
+                  <br />⌚ <strong>Período:</strong> 2025
+                  <br />
+                  🏢 <strong>Empresa:</strong> Fronteiras sem Limites
+                  <br />
+                  📖 <strong>Descrição:</strong> Eletiva de Turismo para
+                  Negócios
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="col-md-4">
+          <div
+            className="card shadow-sm"
+            onClick={handleSectionClick}
+            style={{ cursor: "pointer" }}
+          >
+            <div className="card-body">
+              <h5 className="card-title">Seção 2</h5>
               <p className="card-text">
                 Informações sobre o que é a eletiva de turismo e o que ela
                 abrange.
@@ -66,9 +102,9 @@ const Home = () => {
             style={{ cursor: "pointer" }}
           >
             <div className="card-body">
-              <h5 className="card-title">Seção 2</h5>
+              <h5 className="card-title">Seção 3</h5>
               <p className="card-text">
-                Detalhes adicionais sobre a segunda seção.
+                Imagens dos alunos realizando atividades da Eletiva.
               </p>
             </div>
           </div>
@@ -151,16 +187,6 @@ const Home = () => {
               </div>
             </div>
           )}
-        </div>
-        <div className="col-md-4">
-          <div className="card shadow-sm">
-            <div className="card-body">
-              <h5 className="card-title">Seção 3</h5>
-              <p className="card-text">
-                Mais informações sobre a terceira seção.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
