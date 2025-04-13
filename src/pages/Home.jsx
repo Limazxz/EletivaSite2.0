@@ -1,13 +1,19 @@
 import { useState } from "react";
+import InitialImage from "../components/InitialImage";
 import foto1 from "../assets/foto1.jpg";
 import foto2 from "../assets/foto2.jpg";
 import foto3 from "../assets/foto3.jpg";
 import foto4 from "../assets/foto4.jpg";
 
 const Home = () => {
+  const [showHome, setShowHome] = useState(false);
   const [showCard, setShowCard] = useState(false);
   const [showCarousel, setShowCarousel] = useState(false);
   const [showThirdCard, setShowThirdCard] = useState(false);
+
+  const handleEnterClick = () => {
+    setShowHome(true);
+  };
 
   const handleSectionClick = () => {
     setShowCard(!showCard);
@@ -21,6 +27,10 @@ const Home = () => {
     setShowThirdCard(!showThirdCard);
   };
 
+  if (!showHome) {
+    return <InitialImage onEnterClick={handleEnterClick} />;
+  }
+
   return (
     <div className="container my-5">
       <div className="row justify-content-center">
@@ -32,7 +42,7 @@ const Home = () => {
         </div>
       </div>
       <div className="row mt-4">
-        <div className="col-md-4">
+        <div className="col-md-4 p-2">
           <div
             className="card shadow-sm"
             onClick={handleThirdSectionClick}
@@ -40,9 +50,7 @@ const Home = () => {
           >
             <div className="card-body">
               <h5 className="card-title">Seção 1</h5>
-              <p className="card-text">
-                Informações de quem somos.
-              </p>
+              <p className="card-text">Informações de quem somos.</p>
             </div>
           </div>
           {showThirdCard && (
@@ -63,7 +71,7 @@ const Home = () => {
             </div>
           )}
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 p-2">
           <div
             className="card shadow-sm"
             onClick={handleSectionClick}
@@ -95,7 +103,7 @@ const Home = () => {
             </div>
           )}
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 p-2">
           <div
             className="card shadow-sm"
             onClick={handleCarouselClick}

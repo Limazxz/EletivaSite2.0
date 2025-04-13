@@ -5,7 +5,7 @@ const Header = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          Eletiva-2025
+          Pergodin
         </Link>
         <button
           className="navbar-toggler"
