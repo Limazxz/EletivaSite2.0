@@ -18,9 +18,7 @@ const Home = () => {
       <div className="row justify-content-center">
         <div className="col-md-8 text-center">
           <h2 className="mb-4">Home</h2>
-          <p className="lead">
-            Essa é a página principal. Explore o site para saber mais sobre nós.
-          </p>
+          <p className="lead">Venha Conhecer um pouco sobre nós</p>
         </div>
       </div>
       <div className="row mt-4">

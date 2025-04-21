@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { useState } from "react";
+import pergodinLogo from "../../assets/pergodin.jpg"; // Corrected the logo image path
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,13 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand d-flex align-items-center" to="/">
+          <img
+            src={pergodinLogo}
+            alt="Pergodin"
+            className="img-fluid me-2"
+            style={{ width: "30px", height: "30px" }}
+          />
           Pergodin
         </Link>
         <button
