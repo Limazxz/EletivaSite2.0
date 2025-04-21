@@ -2,34 +2,30 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./App.css";
 
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter as Router, Routes, Route } from "react-router";
 
+import Home from "./pages/Home";
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato";
-import Home from "./pages/Home";
-import NaoEncontrado from "./pages/NaoEncontrado";
-import Footer from "./components/footer/Footer";
 
-function App() {
+const App = () => {
   return (
-    <div className="d-flex flex-column min-vh-100 m-0 p-0">
-      <BrowserRouter>
+    <div className="app-container">
+      <Router>
         <Header />
-
-        <main className="d-flex flex-grow-1 flex-column">
+        <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/contato" element={<Contato />} />
-            <Route path="*" element={<NaoEncontrado />} />
           </Routes>
-        </main>
-
+        </div>
         <Footer />
-      </BrowserRouter>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;

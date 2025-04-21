@@ -1,35 +1,17 @@
 import { useState } from "react";
-import InitialImage from "../components/InitialImage";
 import foto1 from "../assets/foto1.jpg";
 import foto2 from "../assets/foto2.jpg";
 import foto3 from "../assets/foto3.jpg";
 import foto4 from "../assets/foto4.jpg";
 
 const Home = () => {
-  const [showHome, setShowHome] = useState(false);
   const [showCard, setShowCard] = useState(false);
   const [showCarousel, setShowCarousel] = useState(false);
   const [showThirdCard, setShowThirdCard] = useState(false);
 
-  const handleEnterClick = () => {
-    setShowHome(true);
-  };
-
-  const handleSectionClick = () => {
-    setShowCard(!showCard);
-  };
-
-  const handleCarouselClick = () => {
-    setShowCarousel(!showCarousel);
-  };
-
-  const handleThirdSectionClick = () => {
-    setShowThirdCard(!showThirdCard);
-  };
-
-  if (!showHome) {
-    return <InitialImage onEnterClick={handleEnterClick} />;
-  }
+  const handleThirdSectionClick = () => setShowThirdCard(!showThirdCard);
+  const handleSectionClick = () => setShowCard(!showCard);
+  const handleCarouselClick = () => setShowCarousel(!showCarousel);
 
   return (
     <div className="container my-5">

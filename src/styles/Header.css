@@ -1,0 +1,14 @@
+.collapse.navbar-collapse {
+  transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+.animate-open {
+  height: auto;
+  opacity: 1;
+}
+
+.animate-close {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
