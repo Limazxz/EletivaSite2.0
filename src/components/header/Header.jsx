@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
       <div className="container">
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img
@@ -62,6 +62,15 @@ const Header = () => {
                 onClick={handleCloseMenu}
               >
                 Contato
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link"
+                to="/imagens#navbar"
+                onClick={handleCloseMenu}
+              >
+                Imagens
               </Link>
             </li>
           </ul>

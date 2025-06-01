@@ -8,7 +8,12 @@ a {
   text-decoration: none;
 }
 body {
-  background-color: #c1d3f8;
+  background: linear-gradient(
+    to right,
+    #0f4c81,
+    #88d498,
+    #f4a261
+  ); /* Nature and technology-inspired colors */
 }
 footer {
   background-color: #f8f9fa;
@@ -32,9 +37,9 @@ footer {
   object-fit: cover;
   border-radius: 5px; /* Optional: Add rounded corners */
 }
-p{
+p {
   font-size: 1.2rem;
   line-height: 1.5;
   margin: 1rem 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }

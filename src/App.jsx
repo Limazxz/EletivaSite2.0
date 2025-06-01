@@ -9,6 +9,8 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato";
+import NaoEncontrado from "./pages/NaoEncontrado";
+import Imagens from "./pages/Imagens";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/contato" element={<Contato />} />
+            <Route path="*" element={<NaoEncontrado />} />
+            <Route path="/imagens" element={<Imagens />} />
           </Routes>
         </div>
         <Footer />
