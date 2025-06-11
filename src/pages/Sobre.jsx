@@ -1,6 +1,6 @@
 const Sobre = () => {
   return (
-    <div className="container mt-5">
+    <div className="card mt-5 bg-white p-4 w-75 shadow-sm col-md-8 mx-auto">
       <h2 className="mb-4">Sobre Nós</h2>
       <p className="fw-bold">
         🔍 Nossa missão é despertar nos estudantes uma nova perspectiva sobre o turismo,

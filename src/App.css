@@ -8,12 +8,13 @@ a {
   text-decoration: none;
 }
 body {
+  background: #354f9c;
   background: linear-gradient(
-    to right,
-    #0f4c81,
-    #88d498,
-    #f4a261
-  ); /* Nature and technology-inspired colors */
+    90deg,
+    rgba(53, 79, 156, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(217, 63, 63, 1) 100%
+  );
 }
 footer {
   background-color: #f8f9fa;
@@ -42,4 +43,29 @@ p {
   line-height: 1.5;
   margin: 1rem 0;
   font-family: "Arial", sans-serif;
+}
+#card-card {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(173, 216, 230, 1) 50%,
+    rgba(135, 206, 250, 1) 100%
+  );
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(135, 206, 250, 0.5);
+}
+.carousel-img-container {
+  width: 100%;
+  height: 500px; /* ajuste conforme o necessário */
+  overflow: hidden;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

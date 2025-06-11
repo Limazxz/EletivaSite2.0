@@ -1,0 +1,19 @@
+#site-footer {
+  background: linear-gradient(
+    90deg,
+    rgba(53, 79, 156, 1) 0%,
+    rgba(135, 206, 250, 1) 50%,
+    rgba(217, 63, 63, 1) 100%
+  );
+  color: #f8f9fa;
+}
+
+.footer-link {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #ffcccb;
+  text-decoration: underline;
+}

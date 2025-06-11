@@ -1,311 +1,170 @@
-import React from "react";
-import foto1 from "../assets/foto1.jpg";
-import foto2 from "../assets/foto2.jpg";
-import foto3 from "../assets/foto3.jpg";
-import foto4 from "../assets/foto4.jpg";
-import img1 from "../assets/img1.jpg";
-import img2 from "../assets/img2.jpg";
-import img3 from "../assets/img3.jpg";
-import mg4 from "../assets/mg4.jpg";
-import img5 from "../assets/img5.jpg";
-import img6 from "../assets/img6.jpg";
-import img7 from "../assets/img7.jpg";
-import img8 from "../assets/img8.jpg";
-import img9 from "../assets/img9.jpg";
-import img10 from "../assets/img10.jpg";
-import img11 from "../assets/img11.jpg";
-import img12 from "../assets/img12.jpg";
-import img13 from "../assets/img13.jpg";
-import img14 from "../assets/img14.jpg";
-import img15 from "../assets/img15.jpg";
+import { useState } from "react";
 
-const Imagens = () => {
+// Importe suas imagens corretamente aqui
+import foto1 from "/src/assets/foto1.jpg";
+import foto2 from "/src/assets/foto2.jpg";
+import foto3 from "/src/assets/foto3.jpg";
+import foto4 from "/src/assets/foto4.jpg";
+import img1 from "/src/assets/img1.jpg";
+import img2 from "/src/assets/img2.jpg";
+import img3 from "/src/assets/img3.jpg";
+import img4 from "/src/assets/mg4.jpg";
+import img5 from "/src/assets/img5.jpg";
+import img6 from "/src/assets/img6.jpg";
+import img7 from "/src/assets/img7.jpg";
+import img8 from "/src/assets/img8.jpg";
+import img9 from "/src/assets/img9.jpg";
+import img10 from "/src/assets/img10.jpg";
+import img11 from "/src/assets/img11.jpg";
+import img12 from "/src/assets/img12.jpg";
+import img13 from "/src/assets/img13.jpg";
+import img14 from "/src/assets/img14.jpg";
+import img15 from "/src/assets/img15.jpg";
+
+export default function ImageGallery() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const images = [
+    { src: foto1, alt: "1" },
+    { src: foto2, alt: "2" },
+    { src: foto3, alt: "3" },
+    { src: foto4, alt: "4" },
+    { src: img2, alt: "5" },
+    { src: img3, alt: "6" },
+    { src: img6, alt: "7" },
+    { src: img10, alt: "8" },
+    { src: img11, alt: "9" },
+    { src: img13, alt: "10" },
+    { src: img15, alt: "11" },
+    { src: img1, alt: "12" },
+    { src: img4, alt: "13" },
+    { src: img5, alt: "14" },
+    { src: img7, alt: "15" },
+    { src: img8, alt: "16" },
+    { src: img9, alt: "17" },
+    { src: img12, alt: "18" },
+    { src: img14, alt: "19" },
+  ];
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
-    <>
-      <div>
-        <h1 className="text-center mt-5">Imagens</h1>
-        <p className="text-center mb-5">
-          Aqui estão algumas imagens das atividades da Eletiva.
-        </p>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-8">
-              {" "}
-              {/* Adjust column width as needed */}
-              <div
-                className="mt-3"
-                style={{ margin: "10px", border: "1px solid #ddd" }}
-              >
-                <div
-                  id="carouselExampleIndicators"
-                  className="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div className="carousel-indicators">
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="0"
-                      className="active"
-                      aria-current="true"
-                      aria-label="Slide 1"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="1"
-                      aria-label="Slide 2"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="2"
-                      aria-label="Slide 3"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="3"
-                      aria-label="Slide 4"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="4"
-                      aria-label="Slide 5"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="5"
-                      aria-label="Slide 6"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="6"
-                      aria-label="Slide 7"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="7"
-                      aria-label="Slide 8"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="8"
-                      aria-label="Slide 9"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="9"
-                      aria-label="Slide 10"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="10"
-                      aria-label="Slide 11"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="11"
-                      aria-label="Slide 12"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="12"
-                      aria-label="Slide 13"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="13"
-                      aria-label="Slide 14"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="14"
-                      aria-label="Slide 15"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="15"
-                      aria-label="Slide 16"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="16"
-                      aria-label="Slide 17"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="17"
-                      aria-label="Slide 18"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="18"
-                      aria-label="Slide 19"
-                    ></button>
-                  </div>
-                  <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      <img src={foto1} className="d-block w-100" alt="Foto 1" />
-                    </div>
-                    <div className="carousel-item">
-                      <img src={foto2} className="d-block w-100" alt="Foto 2" />
-                    </div>
-                    <div className="carousel-item">
-                      <img src={foto3} className="d-block w-100" alt="Foto 3" />
-                    </div>
-                    <div className="carousel-item">
-                      <img src={foto4} className="d-block w-100" alt="Foto 4" />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img1}
-                        className="d-block w-100"
-                        alt="Imagem 1"
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img2}
-                        className="d-block w-100"
-                        alt="Imagem 2"
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img3}
-                        className="d-block w-100"
-                        alt="Imagem 3"
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img src={mg4} className="d-block w-100" alt="Imagem 4" />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img5}
-                        className="d-block w-100"
-                        alt="Imagem 5"
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img6}
-                        className="d-block w-100"
-                        alt="Imagem 6"
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img7}
-                        className="d-block w-100"
-                        alt="Imagem 7"
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img8}
-                        className="d-block w-100"
-                        alt="Imagem 8"
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img9}
-                        className="d-block w-100"
-                        alt="Imagem 9"
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img10}
-                        className="d-block w-100"
-                        alt="Imagem 10"
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img11}
-                        className="d-block w-100"
-                        alt="Imagem 11"
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img12}
-                        className="d-block w-100"
-                        alt="Imagem 12"
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img13}
-                        className="d-block w-100"
-                        alt="Imagem 13"
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img14}
-                        className="d-block w-100"
-                        alt="Imagem 14"
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={img15}
-                        className="d-block w-100"
-                        alt="Imagem 15"
-                      />
-                    </div>
-                  </div>
-                  <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      className="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      className="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
+    <div className="container py-5">
+      <header className="mb-4 border-bottom pb-3">
+        <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center gap-3">
+            <div className="bg-primary text-white p-2 rounded">
+              <i className="bi bi-camera"></i>
+            </div>
+            <div>
+              <h2 className="fw-bold mb-0">Galeria de Fotos</h2>
+              <small className="text-muted">
+                Suas memórias em alta qualidade
+              </small>
             </div>
           </div>
+          <div>
+            <span className="text-muted me-2">{images.length} fotos</span>
+            <i className="bi bi-grid text-muted"></i>
+          </div>
         </div>
-      </div>
-    </>
-  );
-};
+      </header>
 
-export default Imagens;
+      {/* Carrossel */}
+      <div
+        className="position-relative bg-white shadow rounded mb-4 overflow-hidden"
+        style={{ minHeight: "400px" }}
+      >
+        {images.length > 0 && (
+          <div className="position-relative w-100 h-100 text-white text-start">
+            <img
+              src={images[currentIndex].src}
+              alt={`Foto ${images[currentIndex].alt}`}
+              className="w-100 d-block object-fit-contain"
+              style={{ maxHeight: "500px", background: "#f8f9fa" }}
+            />
+            <div
+              className="position-absolute bottom-0 start-0 w-100 p-3"
+              style={{ background: "rgba(0,0,0,0.6)" }}
+            >
+              <h5 className="mb-0">Imagem {images[currentIndex].alt}</h5>
+              <small className="text-light">
+                Visualização {currentIndex + 1} de {images.length}
+              </small>
+            </div>
+
+            {/* Favorito */}
+            <button className="btn btn-light position-absolute top-0 end-0 m-3 rounded-circle shadow-sm">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+          </div>
+        )}
+
+        {/* Navegação */}
+        {images.length > 1 && (
+          <>
+            <button
+              className="btn btn-secondary position-absolute top-50 start-0 translate-middle-y rounded-circle shadow"
+              style={{ width: "60px", height: "60px" }}
+              onClick={prevSlide}
+            >
+              <i className="bi bi-chevron-left fs-4"></i>
+            </button>
+            <button
+              className="btn btn-secondary position-absolute top-50 end-0 translate-middle-y rounded-circle shadow"
+              style={{ width: "60px", height: "60px" }}
+              onClick={nextSlide}
+            >
+              <i className="bi bi-chevron-right fs-4"></i>
+            </button>
+          </>
+        )}
+      </div>
+
+      {/* Thumbnails */}
+      <div className="d-flex overflow-auto gap-2 pb-3 mb-4">
+        {images.map((img, index) => (
+          <img
+            key={index}
+            src={img.src}
+            alt={`Miniatura ${img.alt}`}
+            onClick={() => goToSlide(index)}
+            className={`img-thumbnail ${
+              index === currentIndex ? "border-primary border-3" : ""
+            }`}
+            style={{
+              width: "80px",
+              height: "80px",
+              objectFit: "cover",
+              cursor: "pointer",
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Indicadores */}
+      <div className="text-center mb-5">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            className={`mx-1 btn btn-sm rounded-circle ${
+              index === currentIndex ? "btn-primary" : "btn-secondary"
+            }`}
+            style={{ width: "10px", height: "10px", padding: 0 }}
+            onClick={() => goToSlide(index)}
+          ></button>
+        ))}
+      </div>
+    </div>
+  );
+}

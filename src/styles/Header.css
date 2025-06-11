@@ -12,3 +12,25 @@
   opacity: 0;
   overflow: hidden;
 }
+
+#site-header {
+  background: linear-gradient(
+    90deg,
+    rgba(53, 79, 156, 1) 0%,
+    rgba(135, 206, 250, 1) 50%,
+    rgba(217, 63, 63, 1) 100%
+  );
+  color: #f8f9fa;
+}
+
+.header-logo {
+  border-radius: 50%;
+}
+
+.nav-link {
+  color: #f8f9fa;
+}
+
+.nav-link:hover {
+  color: #ffcccb;
+}

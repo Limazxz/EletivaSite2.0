@@ -8,7 +8,7 @@ const Home = () => {
   const handleSectionClick = () => setShowCard(!showCard);
 
   return (
-    <div className="container my-5">
+    <div id="card-card" className="container card my-5 bg-secondary p-4 shadow-sm">
       <div className="row justify-content-center">
         <div className="col-md-8 text-center">
           <h2 className="mb-4">Home</h2>
