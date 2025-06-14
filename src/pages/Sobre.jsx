@@ -108,27 +108,6 @@ const Sobre = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="cta-section bg-dark">
-        <div className="container">
-          <div className="cta-content">
-            <div className="cta-text">
-              <h3>Ficou interessado?</h3>
-              <p>
-                Fale com a coordenação da escola para saber como participar da
-                eletiva!
-              </p>
-            </div>
-            <div className="cta-buttons">
-              <button className="btn btn-light m-3">📞 Fale com a gente</button>
-              <button className="btn btn-outline-light">
-                📘 Ver outras eletivas
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

@@ -113,20 +113,16 @@ export default function ImageGallery() {
         {/* Navegação */}
         {images.length > 1 && (
           <>
-            <button
-              className="btn btn-secondary position-absolute top-50 start-0 translate-middle-y rounded-circle shadow"
-              style={{ width: "60px", height: "60px" }}
+            <i
+              className="bi bi-arrow-left-circle fs-4 position-absolute top-50 start-0 translate-middle-y text-secondary"
+              style={{ cursor: "pointer" }}
               onClick={prevSlide}
-            >
-              <i className="bi bi-chevron-left fs-4"></i>
-            </button>
-            <button
-              className="btn btn-secondary position-absolute top-50 end-0 translate-middle-y rounded-circle shadow"
-              style={{ width: "60px", height: "60px" }}
+            ></i>
+            <i
+              className="bi bi-arrow-right-circle fs-4 position-absolute top-50 end-0 translate-middle-y text-secondary"
+              style={{ cursor: "pointer" }}
               onClick={nextSlide}
-            >
-              <i className="bi bi-chevron-right fs-4"></i>
-            </button>
+            ></i>
           </>
         )}
       </div>
