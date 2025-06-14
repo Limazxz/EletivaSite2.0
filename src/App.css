@@ -1,27 +1,62 @@
+/* Root Variables */
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #0dcaf0;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 a {
   color: white;
   text-decoration: none;
 }
+
 body {
-  background: #354f9c;
-  background: linear-gradient(
-    90deg,
-    rgba(53, 79, 156, 1) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(217, 63, 63, 1) 100%
-  );
-}
-footer {
-  background-color: #f8f9fa;
-  padding: 10px 0;
-  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(90deg, #b0db9c, #cae8bd, #ddf6d2, #ecfae5);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
 }
 
+/* Adicione a animação do gradiente */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Layout Containers */
 .app-container {
   display: flex;
   flex-direction: column;
@@ -32,35 +67,26 @@ footer {
   flex: 1;
 }
 
-.rectangular-image {
-  width: 300px; /* Adjust width as needed */
-  height: 200px; /* Adjust height as needed */
-  object-fit: cover;
-  border-radius: 5px; /* Optional: Add rounded corners */
+footer {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  text-align: center;
 }
-p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin: 1rem 0;
-  font-family: "Arial", sans-serif;
-}
+
+/* Custom Cards & Carrossel */
 #card-card {
   width: 100%;
   margin: 0 auto;
   padding: 20px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(173, 216, 230, 1) 50%,
-    rgba(135, 206, 250, 1) 100%
-  );
+  background: linear-gradient(135deg, #ffffff 0%, #add8e6 50%, #87cefa 100%);
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(135, 206, 250, 0.5);
 }
+
 .carousel-img-container {
   width: 100%;
-  height: 500px; /* ajuste conforme o necessário */
+  height: 500px;
   overflow: hidden;
 }
 
@@ -69,3 +95,134 @@ p {
   height: 100%;
   object-fit: cover;
 }
+
+.rectangular-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Typography */
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+  font-family: "Arial", sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-img {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Company Info */
+.company-info {
+  padding: 40px 0;
+  background: #ddf6d2;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.info-card {
+  background: #fffadc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md);
+  background: #fffadc; /* Cor de fundo ao passar o mouse */
+}
+/* Values Section */
+.values-section {
+  padding: 40px 0;
+  background: #ecfae5; /* Cor de fundo menos vibrante */
+  color: #333;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.value-card {
+  background: #fffadc; /* Cor de fundo mais neutra */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md);
+  background: #fffadc; /* Cor de fundo ao passar o mouse */
+}
+
+/* Call to Action Section */
+.cta-section {
+  padding: 40px 0;
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+}
+
+.cta-buttons .btn {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+.animate-fade-in-delay {
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fadeIn 1s ease-out 0.6s both;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Responsivo + Print já incluídos no primeiro CSS */
