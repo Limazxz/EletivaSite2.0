@@ -9,11 +9,30 @@ const Contato = () => {
     message: "",
   });
 
+  const formatPhoneNumber = (value) => {
+    value = value.replace(/\D/g, ""); // Remove caracteres não numéricos
+    if (value.length > 10) {
+      return `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(
+        7,
+        11
+      )}`;
+    } else if (value.length > 5) {
+      return `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(
+        6,
+        10
+      )}`;
+    } else if (value.length > 2) {
+      return `(${value.slice(0, 2)}) ${value.slice(2)}`;
+    } else {
+      return value;
+    }
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [name]: name === "phone" ? formatPhoneNumber(value) : value,
     }));
   };
 
@@ -22,8 +41,6 @@ const Contato = () => {
     console.log("Formulário enviado:", formData);
     alert("Mensagem enviada com sucesso!");
   };
-
-  
 
   return (
     <div className="container mt-5">
@@ -82,7 +99,7 @@ const Contato = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="(14) 99667-7249"
+                    placeholder= "Digite seu Número de Telefone"
                   />
                 </div>
 

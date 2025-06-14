@@ -237,3 +237,18 @@ p {
 }
 
 /* Responsivo + Print já incluídos no primeiro CSS */
+#about-card,
+#about-card-content,
+#about-card-2 {
+  padding: 40px 0;
+  border-radius: 10px;
+  text-align: center;
+  background: #fffadc;
+  box-shadow: var(--shadow-md);
+}
+#about-card-2-content {
+  padding: 20px;
+  background: #fffadc !important; /* Garante que a cor seja aplicada */
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
