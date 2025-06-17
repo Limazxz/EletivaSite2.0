@@ -1,9 +1,23 @@
 import { Link } from "react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import pergodinLogo from "../../assets/pergodin.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [welcomeMessage, setWelcomeMessage] = useState("");
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      const user = JSON.parse(storedUser);
+      setWelcomeMessage(
+        `Olá ${user.name}, ${
+          localStorage.getItem("isReturningUser") ? "seja Bem-Vindo de Volta" : "seja Bem-Vindo"
+        }`
+      );
+      localStorage.setItem("isReturningUser", true); // Mark user as returning
+    }
+  }, []);
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -75,6 +89,15 @@ const Header = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="ms-auto">
+        {welcomeMessage ? (
+          <span className="text-light me-3">{welcomeMessage}</span>
+        ) : (
+          <Link id="login-button" to="/login" className="btn me-5">
+            Login
+          </Link>
+        )}
       </div>
     </nav>
   );
