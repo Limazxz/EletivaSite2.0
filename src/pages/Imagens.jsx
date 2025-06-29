@@ -20,6 +20,9 @@ import img12 from "/src/assets/img12.jpg";
 import img13 from "/src/assets/img13.jpg";
 import img14 from "/src/assets/img14.jpg";
 import img15 from "/src/assets/img15.jpg";
+import img16 from "/src/assets/ImagemMaquete1.jpg";
+import img17 from "/src/assets/ImagemMaquete2.jpg";
+import img18 from "/src/assets/ImagemMaquete3.jpg";
 
 const ImageGallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,6 +47,10 @@ const ImageGallery = () => {
     { src: img9, alt: "17" },
     { src: img12, alt: "18" },
     { src: img14, alt: "19" },
+    { src: img16, alt: "20" },
+    { src: img17, alt: "21" },
+    { src: img18, alt: "22" },
+    // Adicione mais imagens conforme necessário
   ];
 
   const nextSlide = () => {
@@ -103,11 +110,6 @@ const ImageGallery = () => {
                   Visualização {currentIndex + 1} de {images.length}
                 </small>
               </div>
-
-              {/* Favorito */}
-              <button className="btn btn-light position-absolute top-0 end-0 m-3 rounded-circle shadow-sm">
-                <i class="bi bi-chevron-left"></i>
-              </button>
             </div>
           )}
 

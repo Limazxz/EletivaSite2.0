@@ -87,6 +87,15 @@ const Header = () => {
                 Imagens
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link"
+                to="/funcionarios#navbar"
+                onClick={handleCloseMenu}
+              >
+                Funcionários
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

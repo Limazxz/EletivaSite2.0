@@ -13,6 +13,7 @@ import Contato from "./pages/Contato";
 import NaoEncontrado from "./pages/NaoEncontrado";
 import Imagens from "./pages/Imagens";
 import Login from "./pages/Login";
+import Funcionarios from "./pages/Funcionarios";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="*" element={<NaoEncontrado />} />
             <Route path="/imagens" element={<Imagens />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/funcionarios" element={<Funcionarios />} />
           </Routes>
         </div>
         <Footer />
